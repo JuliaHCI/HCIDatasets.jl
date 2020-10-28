@@ -4,8 +4,9 @@ This repository provides a common location for high-contrast imaging datasets in
 
 ## Datasets
 
-The following datasets have been graciously provided:
-* HR8799 - Bottom et al., NIRC2/Vortex Coronagraph
+The following datasets are provided:
+* `HR8799` - HR8799 taken with NIRC2/Vortex Coronagraph
+* `BetaPictoris` - Beta Pictoris taken with NaCo
 
 ## Usage
 
