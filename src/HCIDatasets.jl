@@ -10,9 +10,11 @@ function getdata(path)
 end
 
 include("HR8799.jl")
+include("BetaPictoris.jl")
 
 function __init__()
     register(HR8799_datadep)
+    register(BetaPictoris_datadep)
 end
 
 end
