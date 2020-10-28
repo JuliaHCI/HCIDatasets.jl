@@ -3,6 +3,10 @@ uuid = "1893dc6a-5236-4cb8-aa54-62ea411c10cd"
 authors = ["Miles Lucas <mdlucas@hawaii.edu> and contributors"]
 version = "0.1.0"
 
+[deps]
+DataDeps = "124859b0-ceae-595e-8997-d05f6a7a8dfe"
+FITSIO = "525bcba6-941b-5504-bd06-fd0dc1a4d2eb"
+
 [compat]
 julia = "1"
 
