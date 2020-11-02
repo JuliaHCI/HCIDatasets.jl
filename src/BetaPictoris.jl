@@ -47,7 +47,7 @@ function Base.getindex(::Type{BetaPictoris}, key::Symbol)
     elseif key === :cube_empty
         getdata(datadep"BetaPictoris/naco_betapic_cube_empty.fits")
     elseif key === :pa
-        getdata(datadep"BetaPictoris/naco_betapic_pa.fits")
+        getdata(datadep"BetaPictoris/naco_betapic_pa.fits") |> vec
     elseif key === :psf
         getdata(datadep"BetaPictoris/naco_betapic_psf.fits")
     else
