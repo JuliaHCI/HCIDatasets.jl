@@ -11,10 +11,12 @@ end
 
 include("HR8799.jl")
 include("BetaPictoris.jl")
+include("V471Tau.jl")
 
 function __init__()
     register(HR8799_datadep)
     register(BetaPictoris_datadep)
+    register(V471Tau_datadep)
 end
 
 end
