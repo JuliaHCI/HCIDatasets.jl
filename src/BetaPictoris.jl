@@ -51,6 +51,6 @@ function Base.getindex(::Type{BetaPictoris}, key::Symbol)
     elseif key === :psf
         getdata(datadep"BetaPictoris/naco_betapic_psf.fits")
     else
-        KeyError(key)
+        throw(KeyError(key))
     end
 end

@@ -40,6 +40,6 @@ function Base.getindex(::Type{V471Tau}, key::Symbol)
     elseif key === :wl
         getdata(datadep"V471Tau/sphere_v471tau_wl.fits")
     else
-        KeyError(key)
+        throw(KeyError(key))
     end
 end

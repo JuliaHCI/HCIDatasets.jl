@@ -41,6 +41,6 @@ function Base.getindex(::Type{HR8799}, key::Symbol)
     elseif key === :pa
         getdata(datadep"HR8799/HR8799_pa.fits")
     else
-        KeyError(key)
+        throw(KeyError(key))
     end
 end
