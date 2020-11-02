@@ -1,7 +1,7 @@
 name = "HCIDatasets"
 uuid = "1893dc6a-5236-4cb8-aa54-62ea411c10cd"
 authors = ["Miles Lucas <mdlucas@hawaii.edu> and contributors"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 DataDeps = "124859b0-ceae-595e-8997-d05f6a7a8dfe"

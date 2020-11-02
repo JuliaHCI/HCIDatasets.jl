@@ -9,9 +9,6 @@ Websites
 
 Author: Carlos Gomez-Gonzalez
 
-License: MIT
-
-
 ## Keys
 * `:cube` pre-processed ADI cube
 * `:cube_empty` pre-processed ADI cube with companion (Beta Pictoris b) removed
