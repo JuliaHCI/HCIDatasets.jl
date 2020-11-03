@@ -16,6 +16,16 @@ Author: Carlos Gomez-Gonzalez
 * `:psf` off-axis PSF
 """
 
+# use a custom method that directly downloads to our chosen file-name
+function rename_download(remote_path, localdir)
+    update_period = DataDeps.progress_update_period()
+    DataDeps.HTTP.download(
+        remote_path,
+        joinpath(localdir, "naco_betapic_cube_empty.fits");
+        update_period=update_period
+    )
+end
+
 BetaPictoris_datadep = DataDep(
     "BetaPictoris",
     BetaPictoris_desc,
@@ -28,8 +38,7 @@ BetaPictoris_datadep = DataDep(
     "437e2004ba8737cb3fc2a83330d12f86adf659ad74c1daf52a8e073c0b7619cd";
     fetch_method = [
         fetch_default,
-        # use a custom method that directly downloads to our chosen file-name
-        (remote_path, localdir) -> DataDeps.HTTP.download(remote_path, joinpath(localdir, "naco_betapic_cube_empty.fits")),
+        rename_download,
         fetch_default,
         fetch_default
     ]
