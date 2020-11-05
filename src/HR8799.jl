@@ -12,7 +12,7 @@ License: https://creativecommons.org/licenses/by/4.0/legalcode
 
 Processed data for HR8799 captured using Keck II's NIRC2 with the Vortex Coronagraph. The data was processed in preparation for a journal article and is further described on this page.
 
-Please cite this dataset: Bottom, M., Mawet, D., &amp; Ruane, G. (2020). *HR8799 NIRC2/Vortex Processed Data* [Data set]. Zenodo. https://doi.org/10.5281/ZENODO.4142348
+Please cite this dataset: Bottom, M., Mawet, D., and Ruane, G. (2020). *HR8799 NIRC2/Vortex Processed Data* [Data set]. Zenodo. https://doi.org/10.5281/ZENODO.4142348
 
 ## Keys
 * `:cube` pre-processed ADI cube
@@ -31,7 +31,7 @@ HR8799_datadep = DataDep(
 
 
 @doc HR8799_desc
-struct HR8799 end
+struct HR8799 <: Dataset end
 
 Base.keys(::Type{HR8799}) = (:cube, :pa)
 

@@ -28,7 +28,21 @@ julia> keys(HCIDatasets.HR8799)
 We can load the ADI cube and parallactic angles in this instance, just like a dictionary
 
 ```julia
-julia> HCIDatasets.HR8799[:cube]
+julia> cube = HCIDatasets.HR8799[:cube]
+
+julia> cube, angles = HCIDatasets.BetaPictoris[:cube, :pa]
+```
+
+and we can get the keys or iterate over the pairs
+```julia
+julia> using HCIDatasets: HR8799
+
+julia> keys(HR8799)
+(:cube, :pa)
+
+julia> pairs(HR8799) |> collect
+(:cube => Float32[ ... ],
+ :pa => Float32[ ... ])
 ```
 
 ## Data Dependencies

@@ -26,7 +26,7 @@ V471Tau_datadep = DataDep(
 
 
 @doc V471Tau_desc
-struct V471Tau end
+struct V471Tau <: Dataset end
 
 Base.keys(::Type{V471Tau}) = (:cube, :pa, :psf, :wl)
 
