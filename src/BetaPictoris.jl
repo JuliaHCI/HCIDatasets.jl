@@ -48,7 +48,7 @@ BetaPictoris_datadep = DataDep(
 @doc BetaPictoris_desc
 struct BetaPictoris <: Dataset end
 
-Base.keys(::Type{BetaPictoris}) = (:cube, :pa, :psf, :cube_empty)
+Base.keys(::Type{BetaPictoris}) = (:cube, :cube_empty, :pa, :psf)
 
 function Base.getindex(::Type{BetaPictoris}, key::Symbol)
     if key === :cube
