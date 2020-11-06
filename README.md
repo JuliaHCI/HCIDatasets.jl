@@ -1,5 +1,10 @@
 # HCIDatasets.jl
 
+[![Build Status](https://github.com/juliahci/HCIDatasets.jl/workflows/CI/badge.svg?branch=master)](https://github.com/juliahci/HCIDatasets.jl/actions)
+[![PkgEval](https://juliaci.github.io/NanosoldierReports/pkgeval_badges/H/HCIDatasets.svg)](https://juliaci.github.io/NanosoldierReports/pkgeval_badges/report.html)
+[![Coverage](https://codecov.io/gh/juliahci/HCIDatasets.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/juliahci/HCIDatasets.jl)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This repository provides a common location for high-contrast imaging datasets in an easy-to-consume interface.
 
 ## Datasets
@@ -54,3 +59,7 @@ Note: for package writers using this for testing with CI- DataDeps.jl can be set
 ## Adding a Dataset
 
 If you would like to add a dataset, please upload it to zenodo and then file a [pull request](https://github.com/JuliaHCI/HCIDatasets.jl/pulls) with the corresponding code additions. The code behind HCIDatasets.jl is very simple: browse the `HR8799.jl` file to get an idea of the process.
+
+## License
+
+The code is under an MIT license (see [LICENSE](LICENSE)). Each dataset may have its own license or citations. Please provide attribution for the original data providers when making use of their data!
