@@ -12,7 +12,7 @@ This repository provides a common location for high-contrast imaging datasets in
 The following datasets are provided:
 
 * `HR8799` - HR8799 taken with NIRC2/Vortex Coronagraph
-* `BetaPictoris` - Beta Pictoris taken with NaCo
+* `BetaPictoris` - Beta Pictoris taken with NaCo IRDIS
 * `V471Tau` - V 471 Tau IFS data cube taken with VLT/SPHERE
 
 ## Usage
