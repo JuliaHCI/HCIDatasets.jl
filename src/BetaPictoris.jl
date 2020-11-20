@@ -46,7 +46,7 @@ BetaPictoris_datadep = DataDep(
 
 
 @doc BetaPictoris_desc
-struct BetaPictoris <: Dataset end
+struct BetaPictoris end
 
 Base.keys(::Type{BetaPictoris}) = (:cube, :cube_empty, :pa, :psf)
 

@@ -31,7 +31,7 @@ HR8799_datadep = DataDep(
 
 
 @doc HR8799_desc
-struct HR8799 <: Dataset end
+struct HR8799 end
 
 Base.keys(::Type{HR8799}) = (:cube, :pa)
 
