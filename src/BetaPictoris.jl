@@ -45,12 +45,14 @@ BetaPictoris_datadep = DataDep(
 )
 
 
+struct BetaPictorisDataset <: HCIDataset end
+
 @doc BetaPictoris_desc
-struct BetaPictoris end
+const BetaPictoris = BetaPictorisDataset()
 
-Base.keys(::Type{BetaPictoris}) = (:cube, :cube_empty, :pa, :psf)
+Base.keys(::BetaPictorisDataset) = (:cube, :cube_empty, :pa, :psf)
 
-function Base.getindex(::Type{BetaPictoris}, key::Symbol)
+function Base.getindex(::BetaPictorisDataset, key::Symbol)
     if key === :cube
         getdata(datadep"BetaPictoris/naco_betapic_cube.fits")
     elseif key === :cube_empty

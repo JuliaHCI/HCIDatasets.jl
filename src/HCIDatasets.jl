@@ -9,17 +9,16 @@ function getdata(path)
     return permutedims(raw_data, reverse(1:ndims(raw_data)))
 end
 
+# setup type system
+abstract type HCIDataset end
+
+Base.getindex(d::HCIDataset, keys...) = map(k -> d[k], keys)
+Base.getindex(d::HCIDataset, keys) = map(k -> d[k], keys)
+Base.pairs(d::HCIDataset) = (k => d[k] for k in keys(d))
+
 include("HR8799.jl")
 include("BetaPictoris.jl")
 include("V471Tau.jl")
-
-# use code gen for common methods to avoid type piracy
-# see https://github.com/JuliaHCI/HCIDatasets.jl/issue/
-for DSET in (BetaPictoris, HR8799, V471Tau)
-    Base.getindex(d::Type{DSET}, keys...) = map(k -> d[k], keys)
-    Base.getindex(d::Type{DSET}, keys) = map(k -> d[k], keys)
-    Base.pairs(d::Type{DSET}) = (k => d[k] for k in keys(d))
-end
 
 function __init__()
     register(HR8799_datadep)

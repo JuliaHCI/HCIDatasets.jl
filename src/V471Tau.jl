@@ -25,12 +25,14 @@ V471Tau_datadep = DataDep(
 )
 
 
+struct V471TauDataset <: HCIDataset end
+
 @doc V471Tau_desc
-struct V471Tau end
+const V471Tau = V471TauDataset()
 
-Base.keys(::Type{V471Tau}) = (:cube, :pa, :psf, :wl)
+Base.keys(::V471TauDataset) = (:cube, :pa, :psf, :wl)
 
-function Base.getindex(::Type{V471Tau}, key::Symbol)
+function Base.getindex(::V471TauDataset, key::Symbol)
     if key === :cube
         getdata(datadep"V471Tau/sphere_v471tau_cube.fits")
     elseif key === :pa

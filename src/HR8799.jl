@@ -30,12 +30,14 @@ HR8799_datadep = DataDep(
 )
 
 
+struct HR8799Dataset <: HCIDataset end
+
 @doc HR8799_desc
-struct HR8799 end
+const HR8799 = HR8799Dataset()
 
-Base.keys(::Type{HR8799}) = (:cube, :pa)
+Base.keys(::HR8799Dataset) = (:cube, :pa)
 
-function Base.getindex(::Type{HR8799}, key::Symbol)
+function Base.getindex(::HR8799Dataset, key::Symbol)
     if key === :cube
         getdata(datadep"HR8799/HR8799_cube.fits")
     elseif key === :pa
