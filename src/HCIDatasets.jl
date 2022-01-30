@@ -4,10 +4,7 @@ using DataDeps
 using FITSIO
 
 # helper for loading data with FITSIO.jl
-function getdata(path)
-    raw_data = read(FITS(path)[1])
-    return permutedims(raw_data, reverse(1:ndims(raw_data)))
-end
+getdata(path) = read(FITS(path)[1])
 
 # setup type system
 abstract type HCIDataset end
