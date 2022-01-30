@@ -1,7 +1,7 @@
 # HCIDatasets.jl
 
-[![Build Status](https://github.com/juliahci/HCIDatasets.jl/workflows/CI/badge.svg?branch=master)](https://github.com/juliahci/HCIDatasets.jl/actions)
-[![Coverage](https://codecov.io/gh/juliahci/HCIDatasets.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/juliahci/HCIDatasets.jl)
+[![Build Status](https://github.com/juliahci/HCIDatasets.jl/workflows/CI/badge.svg?branch=main)](https://github.com/juliahci/HCIDatasets.jl/actions)
+[![Coverage](https://codecov.io/gh/juliahci/HCIDatasets.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/juliahci/HCIDatasets.jl)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository provides a common location for high-contrast imaging datasets in an easy-to-consume interface.
